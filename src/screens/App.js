@@ -23,7 +23,7 @@ const App = () => {
     await getMoviesByTerm(searchTerm, setMovies, currentPage, setTotalPages);
   };
   return (
-    <div>
+    <div >
       <Searchbar handleChange={handleChange} handleSubmit={handleSubmit} />
       <MovieList movies={movies}></MovieList>
       {totalPages > 1 ? (

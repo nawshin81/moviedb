@@ -9,7 +9,7 @@ const Pagination = (props) => {
     } else {
       isActive = "";
     }
-    let classes = "wave " + isActive;
+    let classes = "wave-effect " + isActive;
     page_links.push(
       <button
         className={classes}
