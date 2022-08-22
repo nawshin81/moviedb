@@ -1,3 +1,4 @@
 api key 6cf5fc17f93268b7dadde3464daa55b4
 npm install axios
 npm install react-router-dom
+ npm start

@@ -8,6 +8,7 @@ const MovieDetails = (props) => {
     getMovieDetails(props.location.movie_id, setCurrentMovie);
   }, []);
 
+  console.log(currentMovie)
   const ImageURL =
     "https://image.tmdb.org/t/p/w500/" + currentMovie.poster_path;
   return (
@@ -18,16 +19,18 @@ const MovieDetails = (props) => {
             {currentMovie.poster_path == null ? (
               <img
                 src="https://picsum.photos/200/300"
-                style={{ width: "100", height: "200" }}
+                style={{ width: "100", height: "150" }}
               />
             ) : (
-              <img src={ImageURL} style={{ width: "100", height: "200" }} />
+              <img src={ImageURL} style={{ width: "100", height: "150" }} />
             )}
 
             
           </div>
           <div className="card-content">
           <span className="card-title" style={{color:'black'}}>{currentMovie.original_title}</span>
+          <span className="card-title" style={{color:'black'}}>Release Date: {currentMovie.release_date}</span>
+          <span className="card-title" style={{color:'black'}}>Runtime: {currentMovie.runtime} min</span>
             <p style={{fontSize:30,paddingLeft:10,paddingRight:10}}>{currentMovie.overview}</p></div>
           <div className="card-action">
             <Link to="/">Go to search page!</Link>
