@@ -21,5 +21,8 @@ Node.js v18.20.2
 
 Use NVM to run it in later versions
 
+Run the following commands:
+
 nvm install 18.20.2
+
 nvm use 18.20.2
